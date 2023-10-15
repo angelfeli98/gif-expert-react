@@ -1,8 +1,8 @@
 
-const baseUrl = import.meta.env.VITE_END_POINT;
+import env from '../utils/env';
 
 const fetchApi = async(url) => {
-    const res = await fetch(`${baseUrl}/${url}`)
+    const res = await fetch(`${env.baseUrl}/${url}`);
     const data = await res.json();
     return data;
 }

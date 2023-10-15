@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import fetchApi from '../api/gif';
 
-const key = import.meta.env.VITE_GIF_EXPERT_KEY;
+import env from '../utils/env';
 
 const useFetchGifs = (category) => {
 
@@ -12,7 +12,7 @@ const useFetchGifs = (category) => {
     useEffect(() => {
         async function fetchGif() {
             setIsLoading(true);
-            const { data } = await fetchApi(`?api_key=${key}&q=${category}&limit=10`);
+            const { data } = await fetchApi(`?api_key=${env.key}&q=${category}&limit=10`);
             setGifs(data.map(({id, title, images}) => ({id, title, url: images.downsized_medium.url})));
             setIsLoading(false)
         }

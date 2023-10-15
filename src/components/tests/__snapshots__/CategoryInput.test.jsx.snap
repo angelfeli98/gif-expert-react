@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CategoryInput /> should render correctly 1`] = `
+<div>
+  <input
+    placeholder="Categoria"
+    type="text"
+    value=""
+  />
+</div>
+`;

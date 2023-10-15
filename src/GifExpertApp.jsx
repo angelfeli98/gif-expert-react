@@ -1,8 +1,8 @@
 
 import { useState } from 'react';
 
-import CategoryInput from './components/categoryInput';
 import GridGif from './components/GridGif';
+import CategoryInput from './components/CategoryInput';
 
 const GifExpertApp = () => {
 
@@ -11,7 +11,7 @@ const GifExpertApp = () => {
     const onNewValue = (value) => {
         if(categories.includes(value))
             return;
-        setCategories([...categories, value]);
+        setCategories([value, ...categories]);
     };
 
     return (
